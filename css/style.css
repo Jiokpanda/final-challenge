@@ -1,0 +1,293 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 20px;
+    font-family: 'Kanit', sans-serif;
+}
+
+body {
+    height: 100vh;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#log-in {
+    background-color: white;
+    text-align: center;
+    border-radius: 15px 15px 15px 15px;
+    position: relative;
+    padding-top: 25px;
+}
+
+#log-in input {
+    font-family: 'Kanit', sans-serif;
+    padding: 0;
+    border: none;
+    height: 40px;
+    width: 80%;
+    border-bottom: 2px solid gray;
+    outline: none;
+    font-size: 16px;
+    font-weight: 200;
+    transform: translateY(5px);
+}
+
+/* use label as input's placeholder */
+#log-in label {
+    position: absolute;
+    bottom: 10px;
+    left: 32px;
+    top: 35px;
+    pointer-events: none;
+    font-size: 16px;
+    transition: .3s;
+}
+
+/* input prompt animation */
+#log-in input:focus~label {
+    transform: translateY(-23px);
+}
+
+#todo-form {
+    width: 1020px;
+    background-color: white;
+    padding-top: 20px;
+    text-align: center;
+    border-radius: 15px 15px 0 0;
+    position: relative;
+}
+
+#todo-form input {
+    font-family: 'Kanit', sans-serif;
+    padding: 0;
+    border: none;
+    height: 40px;
+    width: 80%;
+    border-bottom: 2px solid gray;
+    outline: none;
+    font-size: 16px;
+    font-weight: 200;
+    transform: translateY(5px);
+}
+
+/* use label as input's placeholder */
+#todo-form label {
+    position: absolute;
+    bottom: 10px;
+    left: 100px;
+    top: 30px;
+    pointer-events: none;
+    font-size: 16px;
+    transition: .3s;
+}
+
+/* input prompt animation */
+#todo-form input:focus~label {
+    transform: translateY(-23px);
+}
+
+#todo-list {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+
+#todo-list li {
+    cursor: pointer;
+    position: relative;
+    width: 460px;
+    display: flex;
+}
+
+.todo-text {
+    flex: 1;
+    font-size: 1rem;
+    font-weight: bold;
+    border-bottom: 2px;
+    vertical-align: center;
+}
+
+.todo-date {
+    font-size: .6rem;
+    font-weight: 200;
+    transform: translate(5%, 20%);
+}
+
+.hidden {
+    display: none;
+}
+
+.delete-button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+}
+
+.upper-main-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-bottom: 20px;
+}
+
+.upper-outer-container {
+    display: flex;
+    width: 1020px;
+    justify-content: space-between;
+
+}
+
+.one-third-container {
+    color: gray;
+    width: 330px;
+    height: 100px;
+    background: white;
+    text-align: center;
+    display: table;
+    border-radius: 15px 15px 15px 15px;
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(107, 107, 107, 0.7);
+    box-shadow: 0px 0px 10px 5px rgba(107, 107, 107, 0.7);
+}
+
+.one-third-container h2 {
+    margin: 0;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.outer-container {
+    border-radius: 15px 15px 15px 15px;
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(107, 107, 107, 0.7);
+    box-shadow: 0px 0px 10px 5px rgba(107, 107, 107, 0.7);
+}
+
+.small-container {
+    display: flex;
+    height: 70px;
+    justify-content: center;
+    align-content: center;
+    color: gray;
+}
+
+.bottom-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.item-left-container {
+    width: 510px;
+    height: 30vh;
+    background: #fff;
+    padding: 10px;
+    padding-left: 30px;
+    background-color: rgb(255, 255, 255);
+    overflow-y: auto;
+    border-radius: 0 0 0 15px;
+}
+
+.item-left-container::-webkit-scrollbar {
+    /* scrollbar width */
+    width: 10px;
+}
+
+.item-left-container::-webkit-scrollbar-thumb {
+    /* scrollbar height */
+    height: 30%;
+    /* scrollbar color */
+    background: gray;
+    border-radius: 10px;
+}
+
+.item-left-container::-webkit-scrollbar-track {
+    /* scrollbar background color */
+    background: rgba(130, 130, 130, 0.1);
+}
+
+.item-right-container {
+    width: 510px;
+    height: 30vh;
+    background: #fff;
+    color: gray;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0 0 15px 0;
+    text-align: center;
+}
+
+.old {
+    color: crimson;
+}
+
+.checked {
+    color: gray;
+    font-style: italic;
+    text-decoration: line-through;
+}
+
+/* make check mark using border and rotate */
+.checked::before {
+    content: "";
+    position: absolute;
+    border-color: gray;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 8px;
+    left: -15px;
+    transform: rotate(45deg);
+    height: 10px;
+    width: 5px;
+}
+
+/* background property */
+.background {
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    animation-name: MOVING-BACKGROUND;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    overflow: hidden;
+}
+
+/* background animation */
+@keyframes MOVING-BACKGROUND {
+    0% {
+        transform: scale(120%);
+    }
+
+    50% {
+        transform: scale(150%);
+    }
+
+    100% {
+        transform: scale(120%);
+    }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Vanilla final challange</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background"></div>
+    <div class="upper-main-container">
+        <div class="upper-outer-container">
+            <div class="one-third-container" id="welcome">
+                <form class="hidden" id="log-in">
+                    <input type="text" name="username" id="" required>
+                    <label>User name</label>
+                </form>
+                <h2 class="hidden"></h2>
+            </div>
+            <div class="one-third-container" id="clock">
+                <h2></h2>
+            </div>
+            <div class="one-third-container" id="weather">
+                <h2></h2><br>
+                <h2></h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="outer-container">
+            <div class="small-container">
+                <form id="todo-form">
+                    <input type="text" required>
+                    <label>Write your To-Do here and press Enter</label>
+                </form>
+            </div>
+            <div class="bottom-container">
+                <div class="item-left-container">
+                    <ul id="todo-list"></ul>
+                </div>
+                <div class="item-right-container">
+                    <h2></h2>
+                    <h2></h2>
+                    <h2></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/clock.js"></script>
+    <script src="./js/profile.js"></script>
+    <script src="./js/todo.js"></script>
+    <script src="./js/background.js"></script>
+    <script src="./js/weather.js"></script>
+    <script src="./js/summary.js"></script>
+</body>
+
+</html>
